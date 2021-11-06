@@ -49,8 +49,12 @@ export const TodoApp = () => {
 
             <div className='row'>
                 <div className='col-6'>
-                   
-                   <TodoList todos={ todos } toogleTodo={ toogleTodo } handleDelete={ handleDelete } />
+                   {
+                       (todos.length != 0)
+                        ? <TodoList todos={ todos } toogleTodo={ toogleTodo } handleDelete={ handleDelete } />
+                        : <h4 className='text-muted'>Lista vacía</h4>
+                   }
+                    
                                 
                 </div>
                 <div className='col-6'>
