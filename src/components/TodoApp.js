@@ -48,16 +48,14 @@ export const TodoApp = () => {
             <hr />
 
             <div className='row d-flex'>
-                <div className='col-lg-6 col-md-6 col-sm-6 col-xs-6 mb-5'>
+                <div className='col-sm-12 col-md-6 mb-5'>
                    {
                        (todos.length !== 0)
                         ? <TodoList todos={ todos } toogleTodo={ toogleTodo } handleDelete={ handleDelete } />
                         : <h4 className='text-muted mt-5 text-center'>Lista vacía</h4>
-                   }
-                    
-                                
+                   }           
                 </div>
-                <div className='col-lg-6 col-md-6 col-sm-6 col-xs-6'>
+                <div className='col-sm-12 col-md-6'>
 
                     <TodoAdd 
                         handleAddTodo={ handleAddTodo }
